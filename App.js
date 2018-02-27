@@ -39,7 +39,7 @@ export default class App extends React.Component {
 
   renderHeader = () => {
     return <View style={styles.header}>
-    <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start', backgroundColor: '#fff'}}>
+    <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-start'}}>
       <View style={styles.profileLayout}>
         <Image
           style={{width:70, height: 70, borderRadius: 35}}
@@ -47,21 +47,21 @@ export default class App extends React.Component {
         />
       </View>
       <View style={styles.profileDescriptionLayout}>
-        <View style={{flex: 1.5, flexDirection: 'row', backgroundColor: 'powderblue'}}>
-          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#00cec9'}}>
+        <View style={{flex: 1.5, flexDirection: 'row'}}>
+          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text style={{fontWeight: 'bold'}}>3,169</Text>
             <Text>게시물</Text>
           </View>
-          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fab1a0'}}>
+          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text style={{fontWeight: 'bold'}}>449</Text>
             <Text>팔로워</Text>
           </View>
-          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#00cec9'}}>
+          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text style={{fontWeight: 'bold'}}>688</Text>
             <Text>팔로잉</Text>
           </View>
         </View>
-        <View style={{flex: 0.6, flexDirection: 'row', backgroundColor: 'skyblue', justifyContent: 'center', marginHorizontal: 5, marginVertical: 5}}>
+        <View style={{flex: 0.6, flexDirection: 'row', justifyContent: 'center', marginHorizontal: 5, marginVertical: 5}}>
           <View style={[{width: '70%', marginRight: 5},styles.buttonStyle]}>
             <Button onPress={this.onPressLearnMore} title="메시지" color="#000000" accessibilityLabel="Learn more about this purple button"/>
           </View>
@@ -74,13 +74,13 @@ export default class App extends React.Component {
         </View>
       </View>
     </View>
-    <View style={{flex: 1, flexDirection: 'row', backgroundColor: 'powderblue', marginVertical: 5}}>
-      <View style={{flex: 1, justifyContent: 'center', backgroundColor: '#00cec9', marginHorizontal: 10}}>
+    <View style={{flex: 1, flexDirection: 'row', marginVertical: 5}}>
+      <View style={{flex: 1, justifyContent: 'center', marginHorizontal: 10}}>
         <Text style={{fontWeight: 'bold'}}>React Native</Text>
         <Text>react.io/@react-native</Text>
       </View>
     </View>
-    <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'powderblue'}}>
+    <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
       <View style={{flex: 1, height: 35, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', marginVertical: 5}}>
         <Image source={require('./images/grid.png')} style={{height: '75%', aspectRatio: 1}} resizeMode='stretch'></Image>
       </View>
@@ -131,32 +131,27 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    backgroundColor: '#fff'
   },
   header: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    backgroundColor: '#fff'
   },
   profileLayout: {
     flex: 1,
     height: 90,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ff7675',
   },
   profileDescriptionLayout: {
     flex: 3,
     height: 90,
-    backgroundColor: '#a29bfe',
   },
   buttonStyle: {
-    alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffeaa7',
+    alignItems: 'center', justifyContent: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 2,
     borderWidth: 0.5,
-    borderColor: '#D8D8D8'
   },
   safeArea: {
     flex: 1,
