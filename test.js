@@ -29,8 +29,8 @@ const Test = (props) => {
         props.appData.data.length ? (
           props.appData.data.map((person, i) => {
             return <View key={i} >
-              <Text>Name: {person.name}</Text>
-              <Text>Age: {person.age}</Text>
+              <Text>Name: {person}</Text>
+
             </View>
           })
         ) : null
