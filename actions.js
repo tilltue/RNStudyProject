@@ -7,7 +7,6 @@ export function fetchData () {
 }
 
 export function getDataSuccess (data) {
-  console.log(data)
   return {
     type: FETCHING_DATA_SUCCESS,
     data

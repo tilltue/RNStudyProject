@@ -8,8 +8,8 @@ import 'rxjs/add/observable/dom/ajax';
 const fetchUserEpic = action$ =>
   action$.ofType(FETCHING_DATA)
     .mergeMap(action =>
-      Observable.ajax.getJSON('https://api.fixer.io/latest')
-        .map(response => getDataSuccess(response))
+      Observable.ajax.getJSON('https://www.googleapis.com/customsearch/v1?key=AIzaSyDgIEqrTKpj_vlOhULzVEBeZ67PrsHrjO8&cx=002863267425170313135:ggwjapyugzu&q=pizza')
+        .map(response => getDataSuccess(response.items))
     );
 
   // action$.ofType(FETCHING_DATA)
